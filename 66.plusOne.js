@@ -32,6 +32,7 @@
 0 <= digits[i] <= 9
  */
 var plusOne = function (digits) {
+  // ! 1
   const len = digits.length;
   for (let i = len - 1; i >= 0; i--) {
     digits[i]++;
