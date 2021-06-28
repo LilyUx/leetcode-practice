@@ -30,9 +30,9 @@
 
  */
 var strStr = function (haystack, needle) {
-  // ! 3
+  // ! 4
   // 边界算法，其他算法没看懂
-  if (!needle) {
+  if (needle === "") {
     return 0;
   }
 
@@ -47,7 +47,6 @@ var strStr = function (haystack, needle) {
         break;
       }
     }
-
     if (flag) {
       return i;
     }

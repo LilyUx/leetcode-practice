@@ -48,7 +48,7 @@
 
  */
 var removeElement = function (nums, val) {
-  // ! 3
+  // ! 4
   // * 1
   if (nums.length === 0) {
     return 0;
@@ -56,6 +56,7 @@ var removeElement = function (nums, val) {
 
   // let fast = 0,
   //   slow = 0;
+
   // while (fast < nums.length) {
   //   if (nums[fast] !== val) {
   //     nums[slow] = nums[fast];
@@ -63,6 +64,7 @@ var removeElement = function (nums, val) {
   //   }
   //   fast++;
   // }
+
   // return slow;
 
   // let slow = 0;
@@ -73,14 +75,13 @@ var removeElement = function (nums, val) {
   //   }
   // }
   // return slow;
+
   // * 2
-
   let left = 0,
-    right = nums.length;
-
-  while (left < right) {
+    right = nums.length - 1;
+  while (left <= right) {
     if (nums[left] === val) {
-      nums[left] = nums[right - 1];
+      nums[left] = nums[right];
       right--;
     } else {
       left++;

@@ -29,15 +29,15 @@
 
  */
 var maxSubArray = function (nums) {
-  // ! 2
+  // ! 3
+  // 滚动数组（思想）
   // * 1
   if (nums.length === 1) {
     return nums[0];
   }
 
-  let sum = 0,
-    ans = nums[0];
-
+  // let sum = 0,
+  //   maxAns = nums[0];
   // nums.forEach(n => {
   //   if (sum > 0) {
   //     sum += n;
@@ -45,18 +45,20 @@ var maxSubArray = function (nums) {
   //     sum = n;
   //   }
 
-  //   ans = Math.max(sum, ans);
+  //   maxAns = Math.max(sum, maxAns);
   // });
 
-  // return ans;
+  // return maxAns;
 
   // * 2
-  nums.forEach(n => {
-    sum = Math.max(n + sum, n)
-    ans = Math.max(sum, ans)
-  })
 
-  return ans
+  let sum = 0,
+    maxAns = nums[0];
+  nums.forEach(n => {
+    sum = Math.max(sum + n, n);
+    maxAns = Math.max(maxAns, sum);
+  });
+  return maxAns;
 };
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));

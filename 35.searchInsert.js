@@ -25,23 +25,23 @@
 
  */
 var searchInsert = function (nums, target) {
-  // ! 2
+  // ! 3
+  // 二分法
   const n = nums.length;
   let left = 0,
     right = n - 1,
     ans = n;
-
   while (left <= right) {
     const mid = ((right - left) >> 1) + left;
-    if (nums[mid] >= target) {
-      ans = mid
+    if (target <= nums[mid]) {
       right = mid - 1;
+      ans = mid;
     } else {
-      left = mid + 1
+      left = mid + 1;
     }
   }
 
-  return ans
+  return ans;
 };
 
 console.log(searchInsert([1, 3, 5, 6], 5));

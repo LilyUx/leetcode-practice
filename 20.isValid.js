@@ -37,14 +37,13 @@
   s 仅由括号 '()[]{}' 组成
  */
 var isValid = function (s) {
-  // ! 4
+  // ! 5
+  // * 1
   if (s.length % 2 === 1) {
     return false;
   }
 
   let stack = [];
-
-  // // * 1
   // for (let item of s) {
   //   switch (item) {
   //     case "(":
@@ -64,19 +63,19 @@ var isValid = function (s) {
   //   }
   // }
 
-  // return !stack.length
+  // return !stack.length;
 
   // * 2
 
   const pairs = new Map([
     [")", "("],
-    ["}", "{"],
     ["]", "["],
+    ["}", "{"],
   ]);
 
-  for (const item of s) {
+  for (let item of s) {
     if (pairs.has(item)) {
-      if (!stack.length || pairs.get(item) !== stack[stack.length - 1]) {
+      if (!stack.length || stack[stack.length - 1] !== pairs.get(item)) {
         return false;
       }
       stack.pop();

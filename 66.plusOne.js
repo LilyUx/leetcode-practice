@@ -32,15 +32,17 @@
 0 <= digits[i] <= 9
  */
 var plusOne = function (digits) {
-  // ! 1
-  const len = digits.length;
-  for (let i = len - 1; i >= 0; i--) {
+  // ! 2
+  const n = digits.length;
+  for (let i = n - 1; i >= 0; i--) {
     digits[i]++;
     digits[i] %= 10;
-    if (digits[i] !== 0) return digits;
+    if (digits[i] !== 0) {
+      return digits;
+    }
   }
 
-  digits = [...Array(len + 1)].map(d => 0);
+  digits = [...Array(n + 1)].fill(0);
   digits[0] = 1;
   return digits;
 };
