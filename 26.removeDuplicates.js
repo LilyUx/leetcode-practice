@@ -37,10 +37,7 @@
 
  */
 var removeDuplicates = function (nums) {
-  // ! 4
-  if (nums.length === 0) {
-    return 0;
-  }
+  // ! 5
   let fast = 1,
     slow = 1;
   while (fast < nums.length) {

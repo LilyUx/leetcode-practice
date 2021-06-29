@@ -29,36 +29,34 @@
 
  */
 var maxSubArray = function (nums) {
-  // ! 3
+  // ! 4
   // 滚动数组（思想）
   // * 1
-  if (nums.length === 1) {
-    return nums[0];
-  }
+  if (nums.length === 1) return nums[0];
 
-  // let sum = 0,
-  //   maxAns = nums[0];
+  // let ans = nums[0],
+  //   sum = 0;
+
   // nums.forEach(n => {
   //   if (sum > 0) {
-  //     sum += n;
+  //     sum += sum + n;
   //   } else {
   //     sum = n;
   //   }
 
-  //   maxAns = Math.max(sum, maxAns);
+  //   sum = Math.max(ans, sum);
   // });
 
-  // return maxAns;
+  // return ans;
 
   // * 2
-
-  let sum = 0,
-    maxAns = nums[0];
+  let ans = nums[0],
+    sum = 0;
   nums.forEach(n => {
     sum = Math.max(sum + n, n);
-    maxAns = Math.max(maxAns, sum);
+    ans = Math.max(sum, ans);
   });
-  return maxAns;
+  return ans;
 };
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));

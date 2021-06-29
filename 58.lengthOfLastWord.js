@@ -23,7 +23,8 @@ s 仅有英文字母和空格 ' ' 组成
 
  */
 var lengthOfLastWord = function (s) {
-  // ! 2
+  // ! 3
+
   let end = s.length - 1;
   while (end >= 0 && s[end] === " ") end--;
   if (end < 0) return 0;

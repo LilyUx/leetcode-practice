@@ -33,4 +33,27 @@
 -100 <= Node.val <= 100
 题目数据保证链表已经按升序排列
  */
-var isSymmetric = function (root) {};
+var deleteDuplicates = function (head) {
+  // ! 1
+  if (!head) {
+    return head;
+  }
+
+  let cur = head;
+
+  while (cur.next) {
+    if (cur.val === cur.next.val) {
+      cur.next = cur.next.next;
+    } else {
+      cur = cur.next;
+    }
+  }
+
+  return head;
+};
+
+function TreeNode(val, left, right) {
+  this.val = val === undefined ? 0 : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? 0 : right;
+}

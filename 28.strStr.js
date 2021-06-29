@@ -30,28 +30,25 @@
 
  */
 var strStr = function (haystack, needle) {
-  // ! 4
+  // ! 5
   // 边界算法，其他算法没看懂
-  if (needle === "") {
-    return 0;
-  }
+  if (!needle) return 0;
 
   let h = haystack.length,
     n = needle.length;
 
   for (let i = 0; i + n <= h; i++) {
     let flag = true;
+
     for (let j = 0; j < n; j++) {
       if (needle[j] !== haystack[i + j]) {
         flag = false;
         break;
       }
     }
-    if (flag) {
-      return i;
-    }
-  }
 
+    if (flag) return i;
+  }
   return -1;
 };
 

@@ -20,7 +20,7 @@
 
  */
 var mySqrt = function (x) {
-  // ! 1
+  // ! 2
 
   // 二分法
   if (x === 0) return 0;
@@ -29,6 +29,7 @@ var mySqrt = function (x) {
   let left = 0,
     right = x,
     ans = -1;
+
   while (left <= right) {
     const mid = ((right - left) >> 1) + left;
     if (mid * mid <= x) {

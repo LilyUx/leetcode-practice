@@ -32,14 +32,12 @@
 0 <= digits[i] <= 9
  */
 var plusOne = function (digits) {
-  // ! 2
+  // ! 3
   const n = digits.length;
   for (let i = n - 1; i >= 0; i--) {
     digits[i]++;
     digits[i] %= 10;
-    if (digits[i] !== 0) {
-      return digits;
-    }
+    if (digits[i] !== 0) return digits;
   }
 
   digits = [...Array(n + 1)].fill(0);

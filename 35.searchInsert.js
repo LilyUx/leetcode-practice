@@ -25,7 +25,7 @@
 
  */
 var searchInsert = function (nums, target) {
-  // ! 3
+  // ! 4
   // 二分法
   const n = nums.length;
   let left = 0,
@@ -33,14 +33,14 @@ var searchInsert = function (nums, target) {
     ans = n;
   while (left <= right) {
     const mid = ((right - left) >> 1) + left;
+
     if (target <= nums[mid]) {
-      right = mid - 1;
       ans = mid;
+      right = mid - 1;
     } else {
       left = mid + 1;
     }
   }
-
   return ans;
 };
 

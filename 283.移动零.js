@@ -60,6 +60,9 @@ var moveZeroes = function(nums) {
 // * 2. 开新数组，i(head), j(tail)
 // * 3. index
 
-const arr = [0,1,0,3,12]
-moveZeroes(arr)
-console.log(arr)
+// const arr = [0,1,0,3,12]
+// moveZeroes(arr)
+// console.log(arr)
+
+
+
