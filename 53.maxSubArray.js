@@ -29,7 +29,7 @@
 
  */
 var maxSubArray = function (nums) {
-  // ! 4
+  // ! 5
   // 滚动数组（思想）
   // * 1
   if (nums.length === 1) return nums[0];
@@ -39,23 +39,25 @@ var maxSubArray = function (nums) {
 
   // nums.forEach(n => {
   //   if (sum > 0) {
-  //     sum += sum + n;
+  //     sum += n;
   //   } else {
   //     sum = n;
   //   }
 
-  //   sum = Math.max(ans, sum);
-  // });
-
+  //   ans = Math.max(ans, sum);
+  // })
   // return ans;
 
   // * 2
+
   let ans = nums[0],
     sum = 0;
+
   nums.forEach(n => {
     sum = Math.max(sum + n, n);
     ans = Math.max(sum, ans);
   });
+
   return ans;
 };
 

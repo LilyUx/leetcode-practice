@@ -26,10 +26,9 @@
 
  */
 var addBinary = function (a, b) {
-  // ! 2
+  // ! 3
   let ans = "",
     ca = 0;
-
   for (let i = a.length - 1, j = b.length - 1; i >= 0 || j >= 0; i--, j--) {
     let sum = ca;
     sum += i >= 0 ? parseInt(a[i]) : 0;

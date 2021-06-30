@@ -34,13 +34,10 @@
 题目数据保证链表已经按升序排列
  */
 var deleteDuplicates = function (head) {
-  // ! 1
-  if (!head) {
-    return head;
-  }
+  // ! 2
+  if (!head) return head;
 
   let cur = head;
-
   while (cur.next) {
     if (cur.val === cur.next.val) {
       cur.next = cur.next.next;

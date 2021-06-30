@@ -25,7 +25,7 @@
 
  */
 var climbStairs = function (n) {
-  // ! 1
+  // ! 2
   // * ----------------
 
   // ** 1 递归优化
@@ -35,24 +35,22 @@ var climbStairs = function (n) {
   // return cache[n];
 
   // * 2 动态规划 滚动数组
-  // let p = 0,
-  //   q = 0,
-  //   r = 1;
-
-  // for (let i = 1; i <= n; i++) {
-  //   p = q;
-  //   q = r;
-  //   r = p + q;
-  // }
-
-  // return r;
+  let p = 0,
+    q = 0,
+    r = 1;
+  for (let i = 1; i <= n; i++) {
+    p = q;
+    q = r;
+    r = p + q;
+  }
+  return r;
 
   // * 3 斐波那契数列
-  let sqrt5 = Math.sqrt(5);
-  let fobi =
-    Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1);
+  // let sqrt5 = Math.sqrt(5);
+  // let fobi =
+  //   Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1);
 
-  return Math.round(fobi / sqrt5);
+  // return Math.round(fobi / sqrt5);
 };
 
 var cache = [];

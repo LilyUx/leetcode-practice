@@ -25,15 +25,15 @@
 
  */
 var searchInsert = function (nums, target) {
-  // ! 4
+  // ! 5
   // 二分法
   const n = nums.length;
   let left = 0,
     right = n - 1,
     ans = n;
+
   while (left <= right) {
     const mid = ((right - left) >> 1) + left;
-
     if (target <= nums[mid]) {
       ans = mid;
       right = mid - 1;
@@ -41,6 +41,7 @@ var searchInsert = function (nums, target) {
       left = mid + 1;
     }
   }
+
   return ans;
 };
 
