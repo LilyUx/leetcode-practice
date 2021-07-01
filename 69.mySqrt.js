@@ -20,7 +20,7 @@
 
  */
 var mySqrt = function (x) {
-  // ! 3
+  // ! 4
 
   // 二分法
   if (x === 0) return 0;
@@ -38,7 +38,6 @@ var mySqrt = function (x) {
       right = mid - 1;
     }
   }
-
   return ans;
 };
 

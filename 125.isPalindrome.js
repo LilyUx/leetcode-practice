@@ -15,9 +15,25 @@
 输出: false
 
  */
- var isPalindrome = function(s) {
+var isPalindrome = function (s) {
+  // ! 1
+  s = s.toLocaleLowerCase().match(/[a-z0-9]+/g);
+  s = s ? s.join("") : "";
 
+  let head = 0,
+    tail = s.length - 1;
+
+  while (head < tail) {
+    if (s[head] === s[tail]) {
+      head++;
+      tail--;
+    } else {
+      return false;
+    }
+  }
+
+  return true;
 };
 
-console.log(isPalindrome("A man, a plan, a canal: Panama"))
-console.log(isPalindrome("race a car"))
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
+console.log(isPalindrome("race a car"));

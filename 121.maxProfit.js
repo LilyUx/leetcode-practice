@@ -29,7 +29,7 @@
 0 <= prices[i] <= 104
  */
 var maxProfit = function (prices) {
-  // ! 1
+  // ! 2
   // * 动态规划
   let min = Number.MAX_VALUE,
     profix = 0;

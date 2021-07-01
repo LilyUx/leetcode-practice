@@ -17,7 +17,15 @@
 输入: [4,1,2,1,2]
 输出: 4
  */
-var singleNumber = function (nums) {};
+var singleNumber = function (nums) {
+  // ! 1 异或
+  let ans = 0;
+  nums.forEach(n => {
+    ans ^= n
+  })
+
+  return ans;
+};
 
 console.log(singleNumber([2, 2, 1]));
 console.log(singleNumber([4, 1, 2, 1, 2]));
