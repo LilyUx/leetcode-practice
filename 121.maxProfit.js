@@ -29,17 +29,16 @@
 0 <= prices[i] <= 104
  */
 var maxProfit = function (prices) {
-  // ! 2
-  // * 动态规划
+  // ! 3
   let min = Number.MAX_VALUE,
-    profix = 0;
+    ans = 0;
 
-  for (let i = 0; i < prices.length; i++) {
-    min = Math.min(min, prices[i]);
-    profix = Math.max(profix, prices[i] - min);
-  }
+  prices.forEach(n => {
+    min = Math.min(min, n);
+    ans = Math.max(ans, n - min);
+  });
 
-  return profix;
+  return ans;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));

@@ -20,24 +20,24 @@
 
  */
 var mySqrt = function (x) {
-  // ! 4
+  // ! 5
 
   // 二分法
-  if (x === 0) return 0;
-  if (x === 1) return 1;
-
   let left = 0,
     right = x,
     ans = -1;
+
   while (left <= right) {
     const mid = ((right - left) >> 1) + left;
+
     if (mid * mid <= x) {
       ans = mid;
       left = mid + 1;
     } else {
-      right = mid - 1;
+      right = right - 1;
     }
   }
+
   return ans;
 };
 

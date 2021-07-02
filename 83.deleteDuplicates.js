@@ -34,7 +34,7 @@
 题目数据保证链表已经按升序排列
  */
 var deleteDuplicates = function (head) {
-  // ! 3
+  // ! 4
   if (!head) return head;
 
   let cur = head;

@@ -18,11 +18,11 @@
 输出: 4
  */
 var singleNumber = function (nums) {
-  // ! 1 异或
+  // ! 2 异或
   let ans = 0;
   nums.forEach(n => {
-    ans ^= n
-  })
+    ans ^= n;
+  });
 
   return ans;
 };

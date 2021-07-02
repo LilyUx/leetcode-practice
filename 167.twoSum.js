@@ -35,6 +35,47 @@ numbers 按 递增顺序 排列
 仅存在一个有效答案
 
  */
- var twoSum = function(numbers, target) {
+var twoSum = function (numbers, target) {
+  // ! 有序
+  // * 二分查找
+  for (let i = 0; i < numbers.length; i++) {
+    let low = i + 1,
+      hight = numbers.length - 1;
+    while (low < hight) {
+      const mid = ((hight - low) >> 1) + low;
 
+      if (numbers[mid] === target - numbers[i]) {
+        return [i + 1, mid + 1];
+      } else if (numbers[mid] > target - numbers[i]) {
+        hight = mid - 1;
+      } else {
+        low = mid + 1;
+      }
+    }
+  }
+
+  return [-1, -1];
+
+  // * 双指针
+
+  // let left = 0,
+  //   right = numbers.length - 1;
+
+  // while (left < right) {
+  //   const sum = numbers[left] + numbers[right];
+
+  //   if (sum === target) {
+  //     return [left + 1, right + 1];
+  //   } else if (sum < target) {
+  //     left++;
+  //   } else {
+  //     right--;
+  //   }
+  // }
+
+  // return [-1, -1];
 };
+
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([2, 3, 4], 6));
+console.log(twoSum([-1, 0], -1));

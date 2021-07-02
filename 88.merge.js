@@ -31,7 +31,7 @@ nums2.length == n
 
  */
 var merge = function (nums1, m, nums2, n) {
-  // ! 2
+  // ! 3
   // let p1 = 0,
   //   p2 = 0,
   //   sorted = new Array(n + m).fill(0);
@@ -70,8 +70,10 @@ var merge = function (nums1, m, nums2, n) {
     } else {
       cur = nums2[p2--];
     }
+
     nums1[tail--] = cur;
   }
+
   return nums1;
 };
 

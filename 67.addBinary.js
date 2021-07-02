@@ -26,7 +26,7 @@
 
  */
 var addBinary = function (a, b) {
-  // ! 4
+  // ! 5
   let ans = "",
     ca = 0;
   for (let i = a.length - 1, j = b.length - 1; i >= 0 || j >= 0; i--, j--) {

@@ -35,15 +35,14 @@
 
  */
 var maxProfit = function (prices) {
-  // ! 2
+  // ! 3
   // * 贪心算法
-  let profix = 0;
-
+  let ans = 0;
   for (let i = 1; i < prices.length; i++) {
-    profix += Math.max(0, prices[i] - prices[i - 1]);
+    ans += Math.max(0, prices[i] - prices[i - 1]);
   }
 
-  return profix;
+  return ans;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
