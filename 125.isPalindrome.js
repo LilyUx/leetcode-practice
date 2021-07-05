@@ -16,18 +16,19 @@
 
  */
 var isPalindrome = function (s) {
-  // ! 2
+  // ! 3
   s = s.toLocaleLowerCase().match(/[a-z0-9]+/g);
   s = s ? s.join("") : "";
 
   let head = 0,
     tail = s.length - 1;
+
   while (head < tail) {
-    if (s[head] === s[tail]) {
+    if (s[head] !== s[tail]) {
+      return false;
+    } else {
       head++;
       tail--;
-    } else {
-      return false;
     }
   }
 

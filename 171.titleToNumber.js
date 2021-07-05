@@ -27,7 +27,17 @@
 输入: "ZY"
 输出: 701
  */
-var titleToNumber = function (columnTitle) {};
+var titleToNumber = function (columnTitle) {
+  // ! 1
+  let ans = 0;
+
+  for (let i = 0; i < columnTitle.length; i++) {
+    const num = columnTitle[i].charCodeAt() - "A".charCodeAt() + 1;
+    ans = ans * 26 + num;
+  }
+
+  return ans;
+};
 
 console.log(titleToNumber("A"));
 console.log(titleToNumber("AB"));

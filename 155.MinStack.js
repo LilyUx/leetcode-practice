@@ -31,7 +31,7 @@ minStack.getMin();   --> 返回 -2.
 
  */
 var MinStack = function () {
-  // ! 1
+  // ! 2
   this.x_stack = [];
   this.min_stack = [Infinity];
 };
@@ -57,14 +57,14 @@ MinStack.prototype.pop = function () {
  * @return {number}
  */
 MinStack.prototype.top = function () {
-  return this.x_stack[this.x_stack.length - 1];
+  return this.x_stack[this.x_stack.length - 1]
 };
 
 /**
  * @return {number}
  */
 MinStack.prototype.getMin = function () {
-  return this.min_stack[this.min_stack.length - 1];
+  return this.min_stack[this.min_stack.length - 1]
 };
 
 /**

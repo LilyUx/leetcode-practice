@@ -18,12 +18,12 @@
 输出: 4
  */
 var singleNumber = function (nums) {
-  // ! 2 异或
+  // ! 3 异或
   let ans = 0;
+
   nums.forEach(n => {
     ans ^= n;
   });
-
   return ans;
 };
 
