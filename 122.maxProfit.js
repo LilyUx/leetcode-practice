@@ -35,7 +35,7 @@
 
  */
 var maxProfit = function (prices) {
-  // ! 4
+  // ! 5
   // * 贪心算法
   let ans = 0;
 

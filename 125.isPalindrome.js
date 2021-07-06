@@ -16,7 +16,7 @@
 
  */
 var isPalindrome = function (s) {
-  // ! 3
+  // ! 4
   s = s.toLocaleLowerCase().match(/[a-z0-9]+/g);
   s = s ? s.join("") : "";
 
@@ -24,11 +24,11 @@ var isPalindrome = function (s) {
     tail = s.length - 1;
 
   while (head < tail) {
-    if (s[head] !== s[tail]) {
-      return false;
-    } else {
+    if (s[head] === s[tail]) {
       head++;
       tail--;
+    } else {
+      return false;
     }
   }
 

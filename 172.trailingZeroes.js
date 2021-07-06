@@ -16,7 +16,20 @@
 解释: 5! = 120, 尾数中有 1 个零.
 说明: 你算法的时间复杂度应为 O(log n) 。
  */
-var trailingZeroes = function (n) {};
+var trailingZeroes = function (n) {
+  // ! 1
+
+  let ans = 0;
+
+  while (n > 1) {
+    n = parseInt(n / 5);
+
+    ans += n;
+  }
+
+  return ans;
+};
 
 console.log(trailingZeroes(3));
 console.log(trailingZeroes(5));
+console.log(trailingZeroes(10));

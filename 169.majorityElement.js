@@ -22,7 +22,28 @@
 
 尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。
  */
-var majorityElement = function (nums) {};
+var majorityElement = function (nums) {
+  // ! 1
+  const n = nums.length;
+  // * 1
+  const map = new Map();
+
+  // for (const n of nums) {
+  //   map.set(n, map.has(n) ? map.get(n) + 1 : 1);
+  // }
+
+  // for (const [key, val] of map) {
+  //   if (val > n / 2) {
+  //     return key;
+  //   }
+  // }
+
+  // * 2
+
+  const sort = nums.sort((a, b) => a - b);
+
+  return sort[Math.floor(n / 2)];
+};
 
 console.log(majorityElement([3, 2, 3]));
 console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));

@@ -29,14 +29,15 @@
 0 <= prices[i] <= 104
  */
 var maxProfit = function (prices) {
-  // ! 4
+  // ! 5
   let min = Number.MAX_VALUE,
     ans = 0;
 
-  prices.forEach(price => {
-    min = Math.min(min, price);
-    ans = Math.max(ans, price - min);
-  });
+  for (let i = 0; i < prices.length; i++) {
+    min = Math.min(min, prices[i]);
+    ans = Math.max(ans, prices[i] - min);
+  }
+
   return ans;
 };
 

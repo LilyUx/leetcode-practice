@@ -28,11 +28,12 @@
 输出: 701
  */
 var titleToNumber = function (columnTitle) {
-  // ! 1
+  // ! 2
   let ans = 0;
 
   for (let i = 0; i < columnTitle.length; i++) {
     const num = columnTitle[i].charCodeAt() - "A".charCodeAt() + 1;
+
     ans = ans * 26 + num;
   }
 

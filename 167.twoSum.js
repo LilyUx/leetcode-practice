@@ -36,14 +36,16 @@ numbers 按 递增顺序 排列
 
  */
 var twoSum = function (numbers, target) {
-  // ! 2
+  // ! 3
   // ! 有序
   // * 二分查找
   // for (let i = 0; i < numbers.length; i++) {
   //   let left = i + 1,
   //     right = numbers.length - 1;
+
   //   while (left <= right) {
   //     const mid = ((right - left) >> 1) + left;
+
   //     if (numbers[mid] === target - numbers[i]) {
   //       return [i + 1, mid + 1];
   //     } else if (numbers[mid] > target - numbers[i]) {
@@ -53,21 +55,21 @@ var twoSum = function (numbers, target) {
   //     }
   //   }
   // }
-
   // return [-1, -1];
 
   // * 双指针
-  let head = 0,
-    tail = numbers.length - 1;
-  while (head < tail) {
-    const num = numbers[head] + numbers[tail];
 
+  let left = 0,
+    right = numbers.length - 1;
+
+  while (left < right) {
+    const num = numbers[left] + numbers[right];
     if (num === target) {
-      return [head + 1, tail + 1];
+      return [left + 1, right + 1];
     } else if (num > target) {
-      tail--;
+      right--;
     } else {
-      head++;
+      left++;
     }
   }
 
