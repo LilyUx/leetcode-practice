@@ -31,7 +31,7 @@ minStack.getMin();   --> 返回 -2.
 
  */
 var MinStack = function () {
-  // ! 3
+  // ! 5
   this.x_stack = [];
   this.min_stack = [Infinity];
 };

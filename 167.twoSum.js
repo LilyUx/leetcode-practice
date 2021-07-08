@@ -36,7 +36,7 @@ numbers 按 递增顺序 排列
 
  */
 var twoSum = function (numbers, target) {
-  // ! 3
+  // ! 5
   // ! 有序
   // * 二分查找
   // for (let i = 0; i < numbers.length; i++) {
@@ -55,24 +55,24 @@ var twoSum = function (numbers, target) {
   //     }
   //   }
   // }
+
   // return [-1, -1];
 
   // * 双指针
+  let head = 0,
+    tail = numbers.length - 1;
 
-  let left = 0,
-    right = numbers.length - 1;
+  while (head < tail) {
+    const num = numbers[head] + numbers[tail];
 
-  while (left < right) {
-    const num = numbers[left] + numbers[right];
     if (num === target) {
-      return [left + 1, right + 1];
+      return [head + 1, tail + 1];
     } else if (num > target) {
-      right--;
+      tail--;
     } else {
-      left++;
+      head++;
     }
   }
-
   return [-1, -1];
 };
 

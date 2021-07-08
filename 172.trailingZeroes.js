@@ -17,8 +17,7 @@
 说明: 你算法的时间复杂度应为 O(log n) 。
  */
 var trailingZeroes = function (n) {
-  // ! 1
-
+  // ! 3
   let ans = 0;
 
   while (n > 1) {

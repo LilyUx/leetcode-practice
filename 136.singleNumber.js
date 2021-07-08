@@ -18,8 +18,9 @@
 输出: 4
  */
 var singleNumber = function (nums) {
-  // ! 4 异或
+  // ! 5 异或
   let ans = 0;
+
   nums.forEach(n => {
     ans ^= n;
   });

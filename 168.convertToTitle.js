@@ -34,18 +34,15 @@ AB -> 28
 输出："FXSHRXW"
  */
 var convertToTitle = function (columnNumber) {
-  // ! 2 10 -> 26
+  // ! 4 10 -> 26
   let sb = [];
-
   while (columnNumber !== 0) {
     columnNumber--;
-
     sb.push(String.fromCharCode((columnNumber % 26) + "A".charCodeAt()));
-
     columnNumber = Math.floor(columnNumber / 26);
   }
 
-  return sb.reverse("").join("");
+  return sb.reverse().join("");
 };
 
 console.log(convertToTitle(1));
