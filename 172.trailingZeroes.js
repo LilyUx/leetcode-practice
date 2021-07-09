@@ -17,15 +17,12 @@
 说明: 你算法的时间复杂度应为 O(log n) 。
  */
 var trailingZeroes = function (n) {
-  // ! 3
+  // ! 5
   let ans = 0;
-
   while (n > 1) {
     n = parseInt(n / 5);
-
     ans += n;
   }
-
   return ans;
 };
 

@@ -34,8 +34,9 @@ AB -> 28
 输出："FXSHRXW"
  */
 var convertToTitle = function (columnNumber) {
-  // ! 4 10 -> 26
+  // ! 5 10 -> 26
   let sb = [];
+
   while (columnNumber !== 0) {
     columnNumber--;
     sb.push(String.fromCharCode((columnNumber % 26) + "A".charCodeAt()));

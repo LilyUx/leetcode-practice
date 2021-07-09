@@ -23,14 +23,13 @@
 尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。
  */
 var majorityElement = function (nums) {
-  // ! 3
+  // ! 5
   const n = nums.length;
   // * 1
   // const map = new Map();
-
-  // for (let i = 0; i < nums.length; i++) {
-  //   map.set(nums[i], map.has(nums[i]) ? map.get(nums[i]) + 1 : 1);
-  // }
+  // nums.forEach((n) => {
+  //   map.set(n, map.has(n) ? map.get(n) + 1 : 1);
+  // });
 
   // for (const [key, val] of map) {
   //   if (val > n / 2) {
